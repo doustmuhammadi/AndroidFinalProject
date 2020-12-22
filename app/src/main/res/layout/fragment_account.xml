@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.AccountFragment">
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="5dp"
+        app:cardElevation="2dp"
+        app:strokeColor="@color/stroke_color"
+        app:strokeWidth="1dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tvUserCaption"
+                style="@style/TitleCation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="@dimen/margin_top_et"
+                android:text="نام کاربری : " />
+
+            <TextView
+                android:id="@+id/tvUserName"
+                style="@style/TitleValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/tvUserCaption"
+                android:layout_toLeftOf="@id/tvUserCaption" />
+
+            <TextView
+                android:id="@+id/tvMobileCaption"
+                style="@style/TitleCation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvUserCaption"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="@dimen/margin_top_et"
+                android:text="شماره همراه : " />
+
+            <TextView
+                android:id="@+id/tvMobileName"
+                style="@style/TitleValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/tvMobileCaption"
+                android:layout_toLeftOf="@id/tvMobileCaption" />
+
+            <Button
+                android:id="@+id/btnSignout"
+                style="@style/Widget.MaterialComponents.Button.TextButton.Icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvMobileCaption"
+                android:layout_alignParentRight="true"
+                android:text="خروج"
+                />
+        </RelativeLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+</FrameLayout>

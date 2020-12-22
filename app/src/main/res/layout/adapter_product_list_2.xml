@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    app:cardElevation="2dp"
+    app:strokeColor="@color/stroke_color"
+    app:strokeWidth="1dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="10dp">
+
+        <ImageView
+            android:id="@+id/imgProductPic"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true" />
+
+        <TextView
+            android:id="@+id/tvProductname"
+            style="@style/ListProductName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imgProductPic"
+            android:layout_centerHorizontal="true" />
+
+        <RelativeLayout
+            android:id="@+id/rlStars"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_top_et"
+            android:layout_below="@id/tvProductname"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/imgStar1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:src="@drawable/ic_baseline_star_border_24" />
+
+            <ImageView
+                android:id="@+id/imgStar2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/imgStar1"
+                android:src="@drawable/ic_baseline_star_border_24" />
+
+            <ImageView
+                android:id="@+id/imgStar3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/imgStar2"
+                android:src="@drawable/ic_baseline_star_border_24" />
+
+            <ImageView
+                android:id="@+id/imgStar4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/imgStar3"
+                android:src="@drawable/ic_baseline_star_border_24" />
+
+            <ImageView
+                android:id="@+id/imgStar5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/imgStar4"
+                android:src="@drawable/ic_baseline_star_border_24" />
+
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/btnShowProduct"
+            style="@style/Widget.MaterialComponents.Button.TextButton.Icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rlStars"
+            android:layout_centerHorizontal="true"
+            android:text="نمایش جزئیات" />
+    </RelativeLayout>
+</com.google.android.material.card.MaterialCardView>

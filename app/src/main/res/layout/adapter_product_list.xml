@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    app:cardElevation="2dp"
+    app:strokeColor="@color/stroke_color"
+    app:strokeWidth="1dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingRight="20dp">
+
+        <ImageView
+            android:id="@+id/imgProductPic"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true" />
+
+        <TextView
+            android:id="@+id/tvProductname"
+            style="@style/ListProductName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_toRightOf="@id/imgProductPic" />
+
+        <TextView
+            android:id="@+id/tvProductname2"
+            style="@style/ListProductName2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvProductname"
+            android:layout_alignParentRight="true"
+            android:layout_toRightOf="@id/imgProductPic" />
+
+        <TextView
+            android:id="@+id/tvCategoryLable"
+            style="@style/ListProductLable"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvProductname2"
+            android:layout_alignParentRight="true"
+            android:text="گروه : " />
+
+        <TextView
+            android:id="@+id/tvCategory"
+            style="@style/ListProductName2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvProductname2"
+            android:layout_alignBaseline="@id/tvCategoryLable"
+            android:layout_toLeftOf="@id/tvCategoryLable"
+            android:layout_toRightOf="@id/imgProductPic" />
+
+        <RelativeLayout
+            android:id="@+id/rlStars"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvCategory"
+            android:layout_marginTop="@dimen/margin_top_et"
+            android:gravity="right"
+            android:paddingRight="20dp">
+
+            <ImageView
+                android:id="@+id/imgStar1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:src="@drawable/ic_baseline_star_border_24" />
+
+            <ImageView
+                android:id="@+id/imgStar2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/imgStar1"
+                android:src="@drawable/ic_baseline_star_border_24" />
+
+            <ImageView
+                android:id="@+id/imgStar3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/imgStar2"
+                android:src="@drawable/ic_baseline_star_border_24" />
+
+            <ImageView
+                android:id="@+id/imgStar4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/imgStar3"
+                android:src="@drawable/ic_baseline_star_border_24" />
+
+            <ImageView
+                android:id="@+id/imgStar5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/imgStar4"
+                android:src="@drawable/ic_baseline_star_border_24" />
+
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/btnShowProduct"
+            style="@style/Widget.MaterialComponents.Button.TextButton.Icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rlStars"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:text="نمایش جزئیات" />
+    </RelativeLayout>
+</com.google.android.material.card.MaterialCardView>

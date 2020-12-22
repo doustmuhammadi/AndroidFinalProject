@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/myCoordinatorLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.ProductActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/imgProductPic"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:layout_alignParentTop="true" />
+
+            <TextView
+                android:id="@+id/tvProductName"
+                style="@style/ProductName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/imgProductPic"
+                android:layout_centerHorizontal="true" />
+
+            <TextView
+                android:id="@+id/tvProductName2"
+                style="@style/ProductName2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvProductName"
+                android:layout_centerHorizontal="true" />
+
+            <RelativeLayout
+                android:id="@+id/rLStars"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvProductName2"
+                android:layout_marginTop="@dimen/margin_top_et"
+                android:paddingLeft="20dp">
+
+                <CheckBox
+                    android:id="@+id/chbStar1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_margin="0dp"
+                    android:button="@drawable/chb_star"
+                    android:onClick="chbStarClick"
+                    android:padding="0dp" />
+
+                <CheckBox
+                    android:id="@+id/chbStar2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="0dp"
+                    android:layout_toRightOf="@id/chbStar1"
+                    android:button="@drawable/chb_star"
+                    android:onClick="chbStarClick"
+                    android:padding="0dp" />
+
+                <CheckBox
+                    android:id="@+id/chbStar3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="0dp"
+                    android:layout_toRightOf="@id/chbStar2"
+                    android:button="@drawable/chb_star"
+                    android:onClick="chbStarClick" />
+
+                <CheckBox
+                    android:id="@+id/chbStar4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="0dp"
+                    android:layout_toRightOf="@id/chbStar3"
+                    android:button="@drawable/chb_star"
+                    android:onClick="chbStarClick" />
+
+                <CheckBox
+                    android:id="@+id/chbStar5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="0dp"
+                    android:layout_toRightOf="@id/chbStar4"
+                    android:button="@drawable/chb_star"
+                    android:onClick="chbStarClick" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tvProductIdLable"
+                style="@style/GeneralLable"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rLStars"
+                android:layout_alignParentRight="true"
+                android:text="کد کالا : " />
+
+            <TextView
+                android:id="@+id/tvProductId"
+                style="@style/GeneralTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/tvProductIdLable"
+                android:layout_toLeftOf="@+id/tvProductIdLable" />
+
+            <TextView
+                android:id="@+id/tvCategoryLable"
+                style="@style/GeneralLable"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvProductIdLable"
+                android:layout_alignParentRight="true"
+                android:text="گروه کالایی : " />
+
+            <TextView
+                android:id="@+id/tvCategory"
+                style="@style/GeneralTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/tvCategoryLable"
+                android:layout_toLeftOf="@+id/tvCategoryLable" />
+
+            <TextView
+                android:id="@+id/tvProductDesc"
+                style="@style/GeneralDesc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvCategoryLable" />
+
+            <View
+                android:id="@+id/line1"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@id/tvProductDesc"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="20dp"
+                android:background="?android:attr/listDivider" />
+
+            <TextView
+                android:id="@+id/tvContactTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/line1"
+                android:layout_marginTop="15dp"
+                android:gravity="center"
+                android:text="جهت اطلاع از قیمت کالا با دفتر مرکزی تماس بگیرید"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="18sp" />
+
+            <Button
+                android:id="@+id/btnCall"
+                style="@style/Widget.MaterialComponents.Button.TextButton.Icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvContactTitle"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="10dp"
+                android:drawableRight="@drawable/ic_baseline_call_24"
+                android:onClick="btnCallClick"
+                android:paddingRight="20dp"
+                android:text="@string/CompanyTele" />
+
+            <Button
+                android:id="@+id/btnSMS"
+                style="@style/Widget.MaterialComponents.Button.TextButton.Icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/btnCall"
+                android:layout_alignParentRight="true"
+                android:drawableRight="@drawable/ic_baseline_sms_24"
+                android:onClick="btnSMSClick"
+                android:paddingRight="20dp"
+                android:text="ارسال پیامک" />
+        </RelativeLayout>
+
+    </ScrollView>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

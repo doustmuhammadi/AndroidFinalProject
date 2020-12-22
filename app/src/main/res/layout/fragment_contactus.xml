@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.ContactusFragment">
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="5dp"
+        app:cardElevation="2dp"
+        app:strokeColor="@color/stroke_color"
+        app:strokeWidth="1dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tvTeleCaption"
+                style="@style/TitleCation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text="تلفن دفتر مرکزی : " />
+
+            <Button
+                android:id="@+id/btnTeleName"
+                style="@style/Widget.MaterialComponents.Button.TextButton.Icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/tvTeleCaption"
+                android:layout_toLeftOf="@id/tvTeleCaption"
+                android:text="@string/CompanyTele" />
+
+            <TextView
+                android:id="@+id/tvMobileCaption"
+                style="@style/TitleCation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvTeleCaption"
+                android:layout_alignParentRight="true"
+                android:text="همراه : " />
+
+            <Button
+                android:id="@+id/btnMobileName"
+                style="@style/Widget.MaterialComponents.Button.TextButton.Icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/tvMobileCaption"
+                android:layout_toLeftOf="@id/tvMobileCaption"
+                android:text="@string/MyMobile" />
+
+            <TextView
+                android:id="@+id/tvAddressCaption"
+                style="@style/TitleCation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvMobileCaption"
+                android:layout_alignParentRight="true"
+                android:text="آدرس : " />
+
+            <TextView
+                android:id="@+id/tvAddressName"
+                style="@style/TitleValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/tvAddressCaption"
+                android:layout_toLeftOf="@id/tvAddressCaption"
+                android:text="تهران - خیابان نلسون ماندلا - خیابان دیدار شمالی پلاک 5 واحد 12" />
+
+
+        </RelativeLayout>
+    </com.google.android.material.card.MaterialCardView>
+</FrameLayout>

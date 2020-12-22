@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_background"
+    tools:context=".ui.DownloadResultActivity">
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="10dp"
+        app:cardElevation="2dp"
+        app:strokeColor="@color/stroke_color"
+        app:strokeWidth="1dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/imgLog"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/margin_top_et"
+                android:src="@drawable/ic_baseline_attachment_24" />
+
+            <TextView
+                android:id="@+id/tvFileCaption"
+                style="@style/TitleCation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/imgLog"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="@dimen/margin_top_et"
+                android:text="نام فایل : " />
+
+            <TextView
+                android:id="@+id/tvFileName"
+                style="@style/TitleValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/tvFileCaption"
+                android:layout_toLeftOf="@id/tvFileCaption" />
+
+            <TextView
+                android:id="@+id/tvExtensionCaption"
+                style="@style/TitleCation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvFileCaption"
+                android:layout_alignParentRight="true"
+                android:text="نوع فایل : " />
+
+            <TextView
+                android:id="@+id/tvExtensionName"
+                style="@style/TitleValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/tvExtensionCaption"
+                android:layout_toLeftOf="@id/tvExtensionCaption" />
+
+            <TextView
+                android:id="@+id/tvSizeCaption"
+                style="@style/TitleCation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvExtensionCaption"
+                android:layout_alignParentRight="true"
+                android:text="حجم : " />
+
+            <TextView
+                android:id="@+id/tvSizeName"
+                style="@style/TitleValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/tvSizeCaption"
+                android:layout_toLeftOf="@id/tvSizeCaption" />
+
+            <TextView
+                android:id="@+id/tvPathCaption"
+                style="@style/TitleCation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvSizeCaption"
+                android:layout_alignParentRight="true"
+                android:text="محل ذخیره : " />
+
+            <TextView
+                android:id="@+id/tvPathName"
+                style="@style/TitleValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/tvPathCaption"
+                android:layout_toLeftOf="@id/tvPathCaption" />
+
+            <Button
+                android:id="@+id/btnShowFile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvPathCaption"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/margin_top_et"
+                android:onClick="btnShowFileClick"
+                android:text="نمایش فایل" />
+        </RelativeLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

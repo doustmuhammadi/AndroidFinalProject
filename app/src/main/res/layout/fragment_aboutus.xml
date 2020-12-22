@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.AboutusFragment">
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="5dp"
+        app:cardElevation="2dp"
+        app:strokeColor="@color/stroke_color"
+        app:strokeWidth="1dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/imgLog"
+                android:layout_width="150dp"
+                android:layout_height="75dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/margin_top_et"
+                android:src="@drawable/logo"/>
+
+            <TextView
+                android:id="@+id/tvComapnyCaption"
+                style="@style/TitleCation"
+                android:layout_marginTop="@dimen/margin_top_et"
+                android:layout_below="@+id/imgLog"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text="نام شرکت : " />
+
+            <TextView
+                android:id="@+id/tvComapnyName"
+                style="@style/TitleValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/tvComapnyCaption"
+                android:layout_toLeftOf="@id/tvComapnyCaption"
+                android:text="خانه هوشمند کوباکو" />
+
+            <TextView
+                android:id="@+id/tvCategoryCaption"
+                style="@style/TitleCation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvComapnyCaption"
+                android:layout_alignParentRight="true"
+                android:text="زمینه فعالیت : " />
+
+            <TextView
+                android:id="@+id/tvCategoryName"
+                style="@style/TitleValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/tvCategoryCaption"
+                android:layout_toLeftOf="@id/tvCategoryCaption"
+                android:text="هوشمند سازی ساختمان" />
+
+            <TextView
+                android:id="@+id/tvDeveloperCaption"
+                style="@style/TitleCation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvCategoryCaption"
+                android:layout_alignParentRight="true"
+                android:text="تهیه کننده : " />
+
+            <TextView
+                android:id="@+id/tvDeveloperName"
+                style="@style/TitleValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/tvDeveloperCaption"
+                android:layout_toLeftOf="@id/tvDeveloperCaption"
+                android:text="محمد دوست محمدی" />
+
+            <TextView
+                android:id="@+id/tvYearCaption"
+                style="@style/TitleCation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvDeveloperCaption"
+                android:layout_alignParentRight="true"
+                android:text="سال ساخت : " />
+
+            <TextView
+                android:id="@+id/tvYearName"
+                style="@style/TitleValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/tvYearCaption"
+                android:layout_toLeftOf="@id/tvYearCaption"
+                android:text="پاییز 1399" />
+
+            <TextView
+                android:id="@+id/tvVersionCaption"
+                style="@style/TitleCation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvYearCaption"
+                android:layout_alignParentRight="true"
+                android:text="شماره ویرایش : " />
+
+            <TextView
+                android:id="@+id/tvVersionName"
+                style="@style/TitleValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/tvVersionCaption"
+                android:layout_toLeftOf="@id/tvVersionCaption"
+                android:text="1.00" />
+
+            <TextView
+                android:id="@+id/tvFooter2"
+                style="@style/TitleCation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@id/tvFooter1"
+                android:gravity="center"
+                android:text="باتشکر از : " />
+
+            <TextView
+                android:id="@+id/tvFooter1"
+                style="@style/TitleValue"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="50dp"
+                android:gravity="center"
+                android:text="جناب آقای دکتر وحید بختیاری \n استاد ارجمند دوره آموزشی اندروید پک" />
+
+        </RelativeLayout>
+    </com.google.android.material.card.MaterialCardView>
+</FrameLayout>

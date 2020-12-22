@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="24dp"
+    android:paddingRight="24dp">
+
+    <ImageView
+        android:id="@+id/imgLogo"
+        android:layout_width="wrap_content"
+        android:layout_height="80dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="50dp"
+        android:src="@drawable/logo" />
+
+    <TextView
+        android:id="@+id/etTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/imgLogo"
+        android:gravity="center"
+        android:text="Please signup before using the App"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="17sp"
+        android:textStyle="bold" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/metUserName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/etTitle"
+        android:layout_marginTop="@dimen/margin_top_et"
+        android:layout_marginBottom="@dimen/margin_top_et"
+        android:hint="User Name"
+        app:counterEnabled="true"
+        app:helperText="@string/helper_username"
+        app:helperTextEnabled="true"
+        app:startIconContentDescription="User Name"
+        app:startIconDrawable="@drawable/ic_baseline_person_24"
+        app:startIconTint="@color/colorPrimary">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/metMobile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/metUserName"
+        android:layout_marginBottom="@dimen/margin_top_et"
+        android:hint="Mobile"
+        app:counterEnabled="true"
+        app:counterMaxLength="13"
+        app:helperText="@string/helper_mobile"
+        app:helperTextEnabled="true"
+        app:startIconContentDescription="Mobile"
+        app:startIconDrawable="@drawable/ic_baseline_phone_android_24"
+        app:startIconTint="@color/colorPrimary">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="phone" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/metPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/metMobile"
+        android:layout_marginBottom="@dimen/margin_top_et"
+        android:hint="Password"
+        app:counterEnabled="true"
+        app:helperText="@string/helper_password"
+        app:helperTextEnabled="true"
+        app:startIconContentDescription="Password"
+        app:startIconDrawable="@drawable/ic_baseline_security_24"
+        app:startIconTint="@color/colorPrimary">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/metRepeatPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/metPassword"
+        android:layout_marginBottom="@dimen/margin_top_et"
+        android:hint="Password"
+        app:counterEnabled="true"
+        app:startIconContentDescription="Repeat Password"
+        app:startIconDrawable="@drawable/ic_baseline_security_24"
+        app:startIconTint="@color/colorPrimary">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/btnSubmitUser"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/metRepeatPassword"
+        android:layout_centerHorizontal="true"
+        android:onClick="btnSubmitUserClick"
+        android:text="Submit" />
+</RelativeLayout>
